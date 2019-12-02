@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vMm-8T-MfA">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="eou-zZ-IcB">
+            <objects>
+                <viewController id="vMm-8T-MfA" customClass="MainViewController" customModule="RxSwiftDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5cU-Sd-xcY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ClP-O6-q9T">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ArticleTableViewCell" rowHeight="80" id="B0a-TI-sO8" customClass="ArticleTableViewCell" customModule="RxSwiftDemo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="B0a-TI-sO8" id="LR0-Gi-86L">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="iYE-Cn-v3s">
+                                                    <rect key="frame" x="15" y="11" width="345" height="58"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agP-R6-oOw">
+                                                            <rect key="frame" x="0.0" y="0.0" width="345" height="33"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6IU-IJ-Cfr">
+                                                            <rect key="frame" x="0.0" y="41" width="345" height="17"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <color key="textColor" white="0.33582589289999998" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="iYE-Cn-v3s" firstAttribute="top" secondItem="LR0-Gi-86L" secondAttribute="topMargin" id="KLd-yh-7ME"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="iYE-Cn-v3s" secondAttribute="trailing" id="PYm-mh-gtn"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="iYE-Cn-v3s" secondAttribute="bottom" id="die-cg-SQc"/>
+                                                <constraint firstItem="iYE-Cn-v3s" firstAttribute="leading" secondItem="LR0-Gi-86L" secondAttribute="leadingMargin" id="jGP-v9-bFa"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="descriptionLabel" destination="6IU-IJ-Cfr" id="hHM-Zo-9ah"/>
+                                            <outlet property="titleLabel" destination="agP-R6-oOw" id="Pyg-DU-g5S"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ClP-O6-q9T" firstAttribute="top" secondItem="mer-xr-kAv" secondAttribute="top" id="48M-4v-t3u"/>
+                            <constraint firstItem="ClP-O6-q9T" firstAttribute="leading" secondItem="mer-xr-kAv" secondAttribute="leading" id="Gv2-5d-Pas"/>
+                            <constraint firstItem="ClP-O6-q9T" firstAttribute="bottom" secondItem="mer-xr-kAv" secondAttribute="bottom" id="eR3-x5-ej0"/>
+                            <constraint firstItem="ClP-O6-q9T" firstAttribute="trailing" secondItem="mer-xr-kAv" secondAttribute="trailing" id="flE-8a-96k"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mer-xr-kAv"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="ClP-O6-q9T" id="tNs-Xn-e0l"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1fC-DS-FF6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="154.40000000000001" y="131.78410794602701"/>
+        </scene>
+    </scenes>
+</document>
